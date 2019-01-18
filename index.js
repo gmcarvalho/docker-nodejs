@@ -1,14 +1,14 @@
 const express = require('express')
 const app = express()
 
-app.get('/', ( req, res ) => {
-    res.sendFile(`${__dirname}/index.html`)
+
+const PORT = 3000;
+const HOST = '0.0.0.0';
+
+const app =  express();
+
+app.get('/', (req, res) => {
+    res.send("Hello Word");
 })
 
-app.get('/about', (req, res) => {
-    res.sendFile(`${__dirname}/about.html`)
-})
-
-app.listen(3000, () => {
-    console.log('Listening on port 3000!')  
-})
+app.listen(PORT, HOST);
